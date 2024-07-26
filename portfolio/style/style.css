@@ -1,0 +1,124 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+html,body{
+    background-color: #FBF9F5;
+}
+#main{
+    width: 92%;
+    margin: auto;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+
+}
+nav{
+    height: 14vh;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h1{
+    font-size: 1.7vw;
+    letter-spacing: -1px;
+    font-weight: 800;
+    width: 30%;
+
+}
+nav .menu{
+    /* font-size: 1vw; */
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 40px;
+}
+.menu ul li{
+    list-style: none;
+    margin: 7px 0;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: 500;
+    color: black;
+}
+.menu ul li a:hover{
+    color: rgba(0, 0, 0, 0.658);
+    transition: all ease 0.7s;
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    margin-top: 8vh;
+
+}
+#home h1{
+    font-size: 19.5vw;
+    letter-spacing: -10px;
+    width: 70%;
+    font-weight: 700;
+    line-height: 19.5vw;
+    margin: 0;
+}
+#text{
+    height: 100vh;
+    width: 100%;
+    padding-top: 5vh;
+}
+#text h2{
+    font-size: 8vw;
+    line-height: 8vw;
+    letter-spacing: -2px;
+    font-weight: 500;
+    text-align: center;
+  text-shadow:  6px 8px 10px rgb(46, 45, 45);
+
+}
+#service {
+    height: 75vh;
+    width: 100%;
+
+}
+#service .container{
+    
+    border-top: 1px solid black;
+    padding: 4vh 0;
+    position: relative;
+}
+#service .container:nth-last-child(1){
+    
+    border-bottom: 1px solid black;
+
+}
+#service .container h2{
+    font-weight: 500;
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: -1px;
+
+}
+#service .container p{
+    font-size: 0.9vw;
+    text-transform:capitalize;
+    line-height: 2vw;
+    padding: 0 15%;
+    margin-top: 5vh;
+    display: none;
+}
+#service .container::after{
+    content: "+";
+    font-size: 2.2vw;
+    position: absolute;
+    top: 32px;
+    right: 4%;
+}
