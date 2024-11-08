@@ -309,7 +309,6 @@ nav i {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
 }
 #projects .project_card:hover {
   transform: scale(22);
