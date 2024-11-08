@@ -5,7 +5,9 @@
 /* Mobile Layout for screens below 768px */
 
 @media only screen and (max-width: 768px) {
-
+    #cursor{
+        display: none;
+    }
     /* Main */
     #main {
         overflow-x: hidden;
