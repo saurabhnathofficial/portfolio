@@ -30,12 +30,12 @@ let projectCards = document.querySelectorAll('#projects');
         });
     
  
-        projectCards.addEventListener('mouseenter', () => {
+        //projectCards.addEventListener('mouseenter', () => {
           // cursor.style.transform = 'scale(2)'; // Increases size by 2x 
           alert('zan he jah')
       });
 
-      projectCards.addEventListener('mouseleave', () => {
+      //projectCards.addEventListener('mouseleave', () => {
           cursor.style.width = '20px';
           cursor.style.height = '20px';
       });
