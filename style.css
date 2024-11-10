@@ -501,10 +501,12 @@ nav i {
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    font-size: 3.4vw;
 }
 
 .footer_bottom .footer_social a {
     text-decoration: none;
+
 }
 
 
