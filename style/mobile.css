@@ -1,0 +1,267 @@
+
+/* css for Mobile Design  */
+
+/* Mobile Layout for screens below 768px */
+
+@media only screen and (max-width: 768px) {
+
+    #cursor {
+        display: none;
+    }
+
+    /* Main */
+    #main {
+        overflow-x: hidden;
+    }
+
+    /* Navigation Bar */
+
+    nav {
+        /* flex-direction: column;   */
+        height: 10vh;
+        width: 100vw;
+        padding: 0;
+
+
+    }
+
+    nav img {
+        height: 13vh;
+    }
+
+    nav .menu {
+        height: 100vh;
+        width: 60%;
+        border-radius: 0;
+        position: absolute;
+        top: 0%;
+        right: -60%;
+        transition: all ease .8s;
+
+    }
+
+    nav .menu ul {
+        flex-direction: column;
+        gap: 10vw;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    nav .menu ul img {
+        display: block;
+        height: 23vh;
+    }
+
+    nav .menu .mobile_social {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translatex(-50%);
+        display: flex;
+    }
+
+    nav .menu .mobile_social a {
+        display: block;
+        background: none;
+        padding: 0;
+    }
+
+    nav .menu .mobile_social a img {
+        height: 6vh;
+    }
+
+    nav .menu a {
+        font-size: 18px;
+        padding: 10px 16px;
+    }
+
+    nav .social_link {
+
+        display: none;
+    }
+
+    nav i {
+        display: block;
+        font-size: 3.7vh;
+        opacity: 99999999999999;
+        position: absolute;
+        right: 6.2%;
+        transition: all ease .8s;
+    }
+
+    /* Home Section */
+    #home {
+        height: 70vh;
+        padding-top: 20px;
+    }
+
+
+    .home_wrapper {
+        height: 65vh;
+    }
+
+    .circle {
+        height: 40vh;
+        width: 40vh;
+    }
+
+
+    #content {
+        width: 90%;
+        height: auto;
+        padding: 0;
+        will-change: transform, opacity;
+    }
+
+    #content .title {
+        font-size: 18px;
+    }
+
+    #content .title span {
+        font-size: 20px;
+    }
+
+    #content .tag_line_h2 {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    #content .tag_line {
+        display: none;
+    }
+
+    #content .tag_line2 {
+        font-size: 16px;
+        line-height: 1.5;
+        width: 70%;
+        display: block;
+
+    }
+
+    #content .tag_line span img {
+        /* height: 20px; */
+        width: 30px;
+
+    }
+
+    .tagline {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 0%;
+    }
+
+    .tagline img {
+        height: 30px;
+        vertical-align: calc(-10px);
+    }
+
+    .tag_line2 {
+        display: block;
+    }
+
+
+    /* Projects Section */
+
+    #projects {
+        width: 100%;
+        flex-direction: column;
+        gap: 28px;
+        padding: 0 8%;
+    }
+
+    .project_card {
+        width: 100%;
+
+    }
+
+    .banner {
+        height: 26vh;
+    }
+
+   
+
+    .bottom_content {
+        padding: 10px;
+        gap: 1.4vh;
+        margin-top: 1.5vh;
+    }
+
+    .bottom_content h1 {
+        font-size: 18px;
+    }
+
+    .bottom_content h2 {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .bottom_content a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .bottom_content a:hover {
+        cursor: pointer;
+    }
+
+    /* Footer */
+    #footer {
+        height: 80vh;
+        padding: 20px;
+        position: relative;
+    }
+
+    .footer_content {
+        width: 85%;
+        height: 70%;
+        gap: 20px;
+    }
+
+    .footer_content h1 {
+        font-size: 18px;
+    }
+
+    .footer_content h1 span {
+        font-size: 20px;
+    }
+
+    .footer_contact p {
+        font-size: 14px;
+    }
+
+    .bottom_footer {
+        gap: 10px;
+    }
+
+    .footer_social img {
+        height: 30px;
+    }
+
+    #footer .footer_social a {
+        text-decoration: none;
+        border: 2px solid red;
+        padding: 5vw;
+    }
+
+    #footer .saurabh {
+        width: fit-content;
+        height: auto;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #footer .saurabh h1 {
+        font-size: 5vw;
+        margin-top: 1vw;
+    }
+
+    #footer .saurabh img {
+        height: 200px;
+    }
+
+
+}
