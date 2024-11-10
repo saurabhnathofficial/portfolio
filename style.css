@@ -8,29 +8,27 @@
 @font-face {
     font-family: 'PPMori';
     src: url('./fonts/PPMori-Regular.otf') format('opentype');
-    font-weight: normal;
+    font-weight: 400;
+    /* Normal weight */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PPMori ExtraLight';
     src: url('./fonts/PPMori-Extralight.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PPMori ExtraLightItalic';
-    src: url('./fonts/PPMori-ExtralightItalic.otf') format('opentype');
-    font-weight: normal;
+    font-weight: 200;
+    /* Lighter font weight */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PPMori SemiBoldItalic';
     src: url('./fonts/PPMori-SemiBoldItalic.otf') format('opentype');
-
+    font-weight: 600;
+    /* Semibold weight */
+    font-style: italic;
 }
+
 
 @font-face {
     font-family: 'ConeriaScriptDemo';
@@ -44,7 +42,19 @@ body {
 }
 
 
-
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 101;
+    transition: all ease;
+    outline: none;
+    /* transform: translate(-50%,-50%); */
+}
+ 
 nav {
     height: 18vh;
     width: 100%;
@@ -54,7 +64,7 @@ nav {
     justify-content: space-between;
     position: fixed;
     background-color: transparent;
-    z-index: 999999999999999999999999;
+    z-index: 100;
 }
 
 nav img {
@@ -141,6 +151,21 @@ nav i {
     display: none;
 }
 
+
+.menu a:hover,
+.btns a:hover,
+.bottom_content a:hover {
+    background-color: #2C54C6;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.bottom_content a:nth-last-child(1):hover {
+    border-color: #2C54C6;
+    transition: border-color 0.3s ease;
+}
+
+
 /* -------------------End of Navigation Bar--------------------- */
 
 
@@ -149,7 +174,8 @@ nav i {
     width: 100%;
     min-height: 100vh;
     background-color: #121212;
-    z-index: -999;
+   
+    position: relative;
 }
 
 #home {
@@ -273,13 +299,12 @@ nav i {
     min-height: 100vh;
     width: 80%;
     margin: auto;
-    /* background-color: #6467748b; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2vw;
     margin-bottom: 25vh;
-
+    position: relative;
 }
 
 .arrow {
@@ -293,7 +318,7 @@ nav i {
 }
 
 .project_card {
-    height: 90vh;
+    height: auto;
     width: 46%;
     border-radius: 20px;
     display: flex;
@@ -303,7 +328,6 @@ nav i {
 .banner {
     height: 50vh;
     width: 100%;
-    background-color: #3C65F6;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -312,7 +336,10 @@ nav i {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* object-position: left; */
+    transition: transform 0.3s ease;
+}
+.banner img:hover {
+    transform: scale(1.1);
 }
 
 .bottom_content {
@@ -330,9 +357,12 @@ nav i {
     background-color: #3C65F6;
     border-radius: 20px;
     margin-right: 1vw;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-
+.btns a:hover {
+    transform: scale(1.05);
+}
 
 .bottom_content h1 {
     font-weight: 700;
@@ -419,6 +449,10 @@ nav i {
     top: 23%;
 }
 
+#footer .saurabh img {
+    height: 250px;
+}
+
 #footer .saurabh h1 {
     font-family: 'PPMori ExtraLight';
     text-align: center;
@@ -478,245 +512,3 @@ nav i {
 
 
 
-/* css for Mobile Design  */
-
-/* Mobile Layout for screens below 768px */
-@media only screen and (max-width: 768px) {
-
-    /* Main */
-    #main {
-        overflow-x: hidden;
-    }
-
-    /* Navigation Bar */
-
-    nav {
-        /* flex-direction: column;   */
-        height: 10vh;
-        width: 100vw;
-        padding: 0;
-
-
-    }
-
-    nav img {
-        height: 13vh;
-    }
-
-    nav .menu {
-        height: 100vh;
-        width: 60%;
-        border-radius: 0;
-        position: absolute;
-        top: 0%;
-        right: -60%;
-
-    }
-
-    nav .menu ul {
-        flex-direction: column;
-        gap: 10vw;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
-
-    nav .menu ul img {
-        display: block;
-        height: 23vh;
-    }
-
-    nav .menu .mobile_social {
-        position: absolute;
-        bottom: 20%;
-        left: 50%;
-        transform: translatex(-50%);
-        display: flex;
-    }
-
-    nav .menu .mobile_social a {
-        display: block;
-        background: none;
-        padding: 0;
-    }
-
-    nav .menu .mobile_social a img {
-        height: 6vh;
-    }
-
-    nav .menu a {
-        font-size: 18px;
-        padding: 10px 16px;
-    }
-
-    nav .social_link {
-
-        display: none;
-    }
-
-    nav i {
-        display: block;
-        font-size: 3.7vh;
-        margin-right: 2.15vh;
-
-    }
-
-    /* Home Section */
-    #home {
-        height: 70vh;
-        padding-top: 20px;
-    }
-
-
-    .home_wrapper {
-        height: 65vh;
-    }
-
-    .circle {
-        height: 40vh;
-        width: 40vh;
-    }
-
-
-    #content {
-        width: 90%;
-        height: auto;
-        padding: 0;
-    }
-
-    #content .title {
-        font-size: 18px;
-    }
-
-    #content .title span {
-        font-size: 20px;
-    }
-
-    #content .tag_line_h2 {
-        font-size: 20px;
-        padding: 0;
-    }
-
-    #content .tag_line {
-        display: none;
-    }
-
-    #content .tag_line2 {
-        font-size: 16px;
-        line-height: 1.5;
-        width: 70%;
-        display: block;
-
-    }
-
-    #content .tag_line span img {
-        /* height: 20px; */
-        width: 30px;
-
-    }
-
-    .tagline {
-        font-size: 16px;
-        margin-top: 20px;
-        line-height: 0%;
-    }
-
-    .tagline img {
-        height: 30px;
-        vertical-align: calc(-10px);
-    }
-
-    .tag_line2 {
-        display: block;
-    }
-
-
-    /* Projects Section */
-
-    #projects {
-        width: 100%;
-        flex-direction: column;
-        gap: 28px;
-        padding: 0 8%;
-    }
-
-    .project_card {
-        width: 100%;
-        height: auto;
-    }
-
-    .banner {
-        height: 26vh;
-    }
-
-    .bottom_content {
-        padding: 10px;
-        gap: 1.4vh;
-        margin-top: 1.5vh;
-    }
-
-    .bottom_content h1 {
-        font-size: 18px;
-    }
-
-    .bottom_content h2 {
-        font-size: 14px;
-        line-height: 1.2;
-    }
-
-    .bottom_content a {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-
-    /* Footer */
-    #footer {
-        height: 80vh;
-        padding: 20px;
-        position: relative;
-    }
-
-    .footer_content {
-        width: 85%;
-        height: 70%;
-        gap: 20px;
-    }
-
-    .footer_content h1 {
-        font-size: 18px;
-    }
-
-    .footer_content h1 span {
-        font-size: 20px;
-    }
-
-    .footer_contact p {
-        font-size: 14px;
-    }
-
-    .bottom_footer {
-        gap: 10px;
-    }
-
-    .footer_social img {
-        height: 30px;
-    }
-
-    #footer .saurabh {
-        width: fit-content;
-        height: auto;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    #footer .saurabh h1{
-       font-size: 5vw;
-       margin-top: 1vw;
-    }
-
-
-
-
-}
