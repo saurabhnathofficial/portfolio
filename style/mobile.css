@@ -260,6 +260,8 @@
     #footer .saurabh img {
         height: 200px;
     }
-
+    .bottom_footer{
+        font-size: 3.1vw;
+    }
 
 }
