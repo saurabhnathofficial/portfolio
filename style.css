@@ -513,6 +513,7 @@ nav i {
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    font-size: 1.2vw;
 }
 
 .footer_bottom .footer_social a {
