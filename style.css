@@ -39,6 +39,7 @@
 
 body {
     font-family: 'PPMori', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 
@@ -52,9 +53,20 @@ body {
     z-index: 101;
     transition: all ease;
     outline: none;
-    /* transform: translate(-50%,-50%); */
+
+
 }
- 
+
+
+/* cursor click animation  */
+
+.cursor {
+    display: none;
+}
+
+
+/* -------------------navigation bar ----------------- */
+
 nav {
     height: 18vh;
     width: 100%;
@@ -174,7 +186,6 @@ nav i {
     width: 100%;
     min-height: 100vh;
     background-color: #121212;
-   
     position: relative;
 }
 
@@ -338,6 +349,7 @@ nav i {
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+
 .banner img:hover {
     transform: scale(1.1);
 }
@@ -507,5 +519,3 @@ nav i {
     text-decoration: none;
 
 }
-
-

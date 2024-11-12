@@ -1,4 +1,3 @@
-
 /* css for Mobile Design  */
 
 /* Mobile Layout for screens below 768px */
@@ -57,7 +56,7 @@
 
     nav .menu .mobile_social {
         position: absolute;
-        bottom: 20%;
+        bottom: 40%;
         left: 50%;
         transform: translatex(-50%);
         display: flex;
@@ -181,7 +180,7 @@
         height: 26vh;
     }
 
-   
+
 
     .bottom_content {
         padding: 10px;
@@ -197,6 +196,9 @@
         font-size: 14px;
         line-height: 1.2;
     }
+    .bottom_content span {
+        font-size: 3.8vw;
+    }
 
     .bottom_content a {
         font-size: 12px;
@@ -207,6 +209,7 @@
         cursor: pointer;
     }
 
+        
     /* Footer */
     #footer {
         height: 80vh;
@@ -260,8 +263,165 @@
     #footer .saurabh img {
         height: 200px;
     }
-    .bottom_footer{
+
+    .bottom_footer {
         font-size: 3.1vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* ---------------------mobile click cursor animation-----------------------  */
+
+
+
+    .cursor {
+        z-index: 102;
+        position: fixed;
+        display: block;
+    }
+
+    .cursor .click_animation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .cursor .click_animation .shap {
+        position: absolute;
+        opacity: 0;
+
+    }
+
+    /* circles  */
+    .cursor .click_animation .shap.circle.big {
+        /* height: 40px;
+        width: 40px;
+        border: 2px solid #4fb4f8;
+        border-radius: 50%; */
+        display: none;
+        position: absolute;
+
+    }
+
+    .cursor .click_animation .shap.circle.small {
+        /* height: 25px;
+        width: 25px;
+        border: 1px solid #2ca8fa;
+        border-radius: 50%; */
+        display: none;
+    }
+
+    .cursor.active .click_animation .shap.circle {
+        animation: click_animation_circle 3s ease-out infinite;
+    }
+
+    @keyframes click_animation_circle {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        30% {
+            opacity: 0;
+            transform: scale(3);
+        }
+
+
+    }
+
+    /* triangle  */
+    .cursor .click_animation .shap.triangle.yellow {
+        border-left: 7.5px solid transparent;
+        border-right: 7.5px solid transparent;
+        border-bottom: 14px solid #f9de2d;
+        border-top: 0px;
+    }
+
+    .cursor.active .click_animation .shap.triangle.yellow {
+        animation: click_animation_triangle_yellow 3s ease-out infinite;
+    }
+
+    @keyframes click_animation_triangle_yellow {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale(2) translate(50px, -50px) rotate(360deg);
+        }
+    }
+
+    .cursor .click_animation .shap.triangle.green {
+
+        border-left: 5.5px solid transparent;
+        border-right: 5.5px solid transparent;
+        border-bottom: 10px solid #47eda0;
+        border-top: 0px;
+    }
+
+    .cursor.active .click_animation .shap.triangle.green {
+        animation: click_animation_triangle_green 3s ease-out infinite;
+    }
+
+    @keyframes click_animation_triangle_green {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale(2) translate(20px, 50px) rotate(360deg);
+        }
+    }
+
+    /* disc  */
+
+    .cursor .click_animation .shap.disc {
+        width: 8.5px;
+        height: 8.5px;
+        background-color: #d563f8;
+        border-radius: 50%;
+    }
+
+    .cursor.active .click_animation .shap.disc {
+        animation: click_animation_disc 3s ease-out infinite;
+    }
+
+    @keyframes click_animation_disc {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale(2) translate(-70px, -30px);
+        }
     }
 
 }

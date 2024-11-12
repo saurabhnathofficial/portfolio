@@ -4,20 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>saurabhnath</title>
 
     <link rel="shortcut icon" href="./assets/icons/fav.png" type="image/x-icon">
+    <!-- main css  -->
     <link rel="stylesheet" href="./style.css">
+    <!-- mobile css  -->
     <link rel="stylesheet" href="style/mobile.css">
+    <!-- google fonts  -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
 
 <body>
 
+    <!-- --------------unversel cursor--------------  -->
     <div id="cursor"></div>
 
+    <!-- ---------------custome click cursor-----------------  -->
+    <div class="cursor">
+        <div class="click_animation">
+            <div class="shap circle big"></div>
+            <div class="shap circle small"></div>
+            <div class="shap triangle yellow"></div>
+            <div class="shap triangle green"></div>
+            <div class="shap triangle disc"></div>
+        </div>
+    </div>
+
+    <!-- ----------------navigation bar------------------  -->
     <nav>
         <img src="./assets/icons/lo.png" alt="logo">
         <div class="menu">
@@ -26,15 +44,16 @@
                 <img src="./assets/icons/lo.png" alt=""> <!-- for mobile layout -->
 
                 <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Work</a></li>
+                <li><a href="./About/about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1uwXz6mC6MK9GKYSz05gQsDdD92PLLSHN/view" target="_blank">Resume</a></li>
+                <li><a href="work.html">Work</a></li>
 
             </ul>
             <div class="mobile_social">
 
 
-                <a class="linkedin" href="https://www.linkedin.com/in/saurabhnathofficial" target="_blank"><img src="./assets/icons/linkedin.png" alt="linkedin"></a>
+                <a class="linkedin" href="https://www.linkedin.com/in/saurabhnathofficial" target="_blank"><img
+                        src="./assets/icons/linkedin.png" alt="linkedin"></a>
                 <a class="github" href="https://github.com/saurabhnathofficial
             " target="_blank"><img src="./assets/icons/git.png" alt="github"></a>
             </div>
@@ -47,7 +66,11 @@
         <i class="ri-menu-line" id="nav_btn"></i> <!-- for mobile layout -->
     </nav>
 
+    <!-- --------------main-------------  -->
     <div id="main">
+
+        <!-- -----------------------Home page--------------------- -->
+
         <div id="home">
             <div class="home_wrapper">
                 <div class="circle c1"></div>
@@ -79,7 +102,7 @@
                 </h2>
                 <h2 class="tag_line2 tag_line">
                     <span class="tag_line_h2">Simplifying tough <span>
-                        <br>
+                            <br>
                             <img src="./assets/icons/target.png" class="img1" alt="">
                         </span> problems to
                         <br>
@@ -101,13 +124,15 @@
                         awesome.</span>
                 </div>
                 <!-- End of Content tagline -->
+                 
+
             </div>
 
             <!-- End of Content -->
         </div>
-
         <!-- End of Home -->
 
+        <!-- -----------------------Project page--------------------- -->
 
         <div id="projects">
 
@@ -138,7 +163,7 @@
                 </div>
                 <div class="bottom_content">
                     <div class="btns">
-                       
+
                         <a href="https://github.com/saurabhnathofficial/Tala_Snacks" target="_blank">Work</a>
                         <a href="https://github.com/saurabhnathofficial/Tala_Snacks" target="_blank">Frontend</a>
                     </div>
@@ -219,8 +244,9 @@
             </div>
 
         </div>
-
         <!-- End of Projects -->
+
+        <!-- -----------------------Footer page--------------------- -->
 
         <div id="footer">
             <div class="footer_content">
@@ -230,7 +256,7 @@
 
 
                 <div class="saurabh">
-                    <img src="./assets/profile-pic (18).png"  alt="">
+                    <img src="./assets/profile-pic (18).png" alt="">
                     <h1>Saurabh Nath</h1>
                 </div>
 
@@ -266,18 +292,23 @@
             </div>
 
         </div>
-
         <!-- End of Footer  -->
 
+        <!-- End of Main Page  -->
     </div>
+     <!-- End of Main Page  -->
 
+    <!-- gsap script  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <!-- ScrollTrigger script  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Main Script  -->
     <script src="script.js"></script>
 
 </body>

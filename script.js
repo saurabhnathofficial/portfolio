@@ -1,31 +1,64 @@
-let tag_anime = document.getElementsByClassName("content_anime")
-
-
-
 // cursor Animation 
 
 var body = document.querySelector('body')
-const cursor = document.getElementById('cursor');
+const uniCursor = document.getElementById('cursor');
 
 body.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
+  uniCursor.style.left = e.pageX + 'px';ww
+  uniCursor.style.top = e.pageY + 'px';
 
 });
 
 document.addEventListener('mousemove', (e) => {
-  gsap.to(cursor, {
+  gsap.to(uniCursor, {
     left: e.x,
     right: e.y
   })
 });
 
 
+// click cursor animation 
+
+const cursorAnime = document.querySelector(".cursor");
+const cursors = document.querySelectorAll(".cursor");
+
+document.addEventListener("click", (e) => {
+
+  let x = e.clientX;
+  let y = e.clientY;
+
+  cursorAnime.style.left = x + "px";
+  cursorAnime.style.top = y + "px";
+
+
+  cursors.forEach((cursor) => {
+    cursor.classList.add("active");
+    uniCursor.classList.add("cursor_none");
+
+    function removeCursorActive() {
+      cursor.classList.remove("active");
+    }
+    
+    setTimeout(removeCursorActive, 1000)
+  });
+
+
+
+
+  let cursorClone = cursorAnime.cloneNode(true);
+  document.querySelector("body").appendChild(cursorClone);
+
+  setTimeout(() => {
+    cursorClone.remove();
+  }, 1000);
+
+})
+
 // project cursor Animation 
 
- 
+
 // var card = document.querySelectorAll(".project_card")
- 
+
 // card.forEach(card => {
 //   card.addEventListener('mouseenter',function(){
 //      cursor.style.transform = 'scale(3.5)'
@@ -56,6 +89,21 @@ btn.addEventListener("click", function (d) {
   btn.classList.toggle('rotate')
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Animation Part 
 
 var tl = gsap.timeline();
@@ -79,7 +127,7 @@ gsap.from('#projects', {
   scrollTrigger: {
     trigger: "#projects",
     scroller: "body",
-    start: "top 80%",
+    start: "top 88%",
     end: "top 75%",
     scrub: 1,
   }

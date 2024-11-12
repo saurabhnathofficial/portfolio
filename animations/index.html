@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.826);
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+
+        /* cursor click animation  */
+        .cursor {
+            z-index: 9;
+            position: fixed;
+        }
+
+        .cursor .click_animation {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .cursor .click_animation .shap {
+            position: absolute;
+            opacity: 0;
+        }
+
+        /* circles  */
+        .cursor .click_animation .shap.circle.big {
+            height: 40px;
+            width: 40px;
+            border: 2px solid #4fb4f8;
+            border-radius: 50%;
+
+        }
+
+        .cursor .click_animation .shap.circle.small {
+            height: 25px;
+            width: 25px;
+            border: 1px solid #2ca8fa;
+            border-radius: 50%;
+
+        }
+
+        .cursor.active .click_animation .shap.circle {
+            animation: click_animation_circle 3s ease-out infinite;
+        }
+
+        @keyframes click_animation_circle {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 0;
+                transform: scale(3);
+            }
+
+
+        }
+
+        /* triangle  */
+        .cursor .click_animation .shap.triangle.yellow {
+            border-left: 7.5px solid transparent;
+            border-right: 7.5px solid transparent;
+            border-bottom: 14px solid #f9de2d;
+            border-top: 0px;
+        }
+
+        .cursor.active .click_animation .shap.triangle.yellow {
+            animation: click_animation_triangle_yellow 3s ease-out infinite;
+        }
+
+        @keyframes click_animation_triangle_yellow {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+                transform: scale(2.5) translate(50px, -50px) rotate(360deg);
+            }
+        }
+
+        .cursor .click_animation .shap.triangle.green {
+
+            border-left: 5.5px solid transparent;
+            border-right: 5.5px solid transparent;
+            border-bottom: 10px solid #47eda0;
+            border-top: 0px;
+        }
+
+        .cursor.active .click_animation .shap.triangle.green {
+            animation: click_animation_triangle_green 3s ease-out infinite;
+        }
+
+        @keyframes click_animation_triangle_green {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+                transform: scale(2.5) translate(20px, 50px) rotate(360deg);
+            }
+        }
+
+        /* disc  */
+
+        .cursor .click_animation .shap.disc {
+            width: 8.5px;
+            height: 8.5px;
+            background-color: #d563f8;
+            border-radius: 50%;
+        }
+
+        .cursor.active .click_animation .shap.disc {
+            animation: click_animation_disc 3s ease-out infinite;
+        }
+
+        @keyframes click_animation_disc {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+                transform: scale(2.5) translate(-70px, -30px);
+            }
+        }
+
+        /* home section  */
+
+
+        .clickable-area {
+            position: relative;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            transform: scale(0);
+            animation: ripple-effect 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-effect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cursor">
+        <div class="click_animation">
+            <div class="shap circle big"></div>
+            <div class="shap circle small"></div>
+            <div class="shap triangle yellow"></div>
+            <div class="shap triangle green"></div>
+            <div class="shap triangle disc"></div>
+        </div>
+    </div>
+
+    <div class="clickable-area">
+        <!-- Content goes here -->
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, deleniti fugiat? Soluta cumque neque, vitae
+        sit dignissimos velit. Cum reiciendis doloribus fuga aperiam obcaecati suscipit quaerat quas nesciunt pariatur
+        adipisci.
+    </div>
+
+    <script>
+        const cursorAnime = document.querySelector(".cursor");
+        const cursors = document.querySelectorAll(".cursor");
+
+        document.addEventListener("click", (e) => {
+            let x = e.clientX;
+            let y = e.clientY;
+
+            cursorAnime.style.left = x + "px";
+            cursorAnime.style.top = y + "px";
+
+
+            cursors.forEach((cursor) => {
+                cursor.classList.add("active");
+
+                function removeCursorActive() {
+                    cursor.classList.remove("active");
+                }
+                setTimeout(removeCursorActive, 1000)
+            });
+
+
+
+
+            let cursorClone = cursorAnime.cloneNode(true);
+            document.querySelector("body").appendChild(cursorClone);
+
+            setTimeout(() => {
+                cursorClone.remove();
+            }, 1000);
+
+        })
+
+        document.querySelector('.clickable-area').addEventListener('click', function (e) {
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
+            ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+
+    </script>
+</body>
+
+</html>
