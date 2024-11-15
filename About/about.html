@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="..//style.css">
     <!-- mobile css  -->
     <link rel="stylesheet" href="../style/mobile.css">
+    <!-- about css  -->
+    <link rel="stylesheet" href="./about.css">
     <!-- google fonts  -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <!-- remix icon -->
@@ -43,9 +45,10 @@
 
                 <img src="../assets/icons/lo.png" alt=""> <!-- for mobile layout -->
 
-                <li><a  href="#">Home</a></li>
-                <li><a class="active" href="about.html">About</a></li>
-                <li><a href="https://drive.google.com/file/d/1uwXz6mC6MK9GKYSz05gQsDdD92PLLSHN/view" target="_blank">Resume</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a class="active" href="#">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1uwXz6mC6MK9GKYSz05gQsDdD92PLLSHN/view"
+                        target="_blank">Resume</a></li>
                 <li><a href=" ../work.html">Work</a></li>
 
             </ul>
@@ -68,12 +71,42 @@
 
     <!-- --------------main-------------  -->
     <div id="main">
-   
-        <div id="about_home">
-            <h1>about_page</h1>
-        </div>
-        <!-- -----------------------Footer page--------------------- -->
-<!-- 
+        <div id="container">
+            <div id="about_home">
+                <div class="home_wrapper">
+                    <div class="circle c1"></div>
+                    <div class="circle"></div>
+                </div>
+                
+                <div id="header">
+                    <img src="../assets/nameplate.png" alt="" srcset="">
+                </div>
+                <div id="about_content">
+
+                    <img src="../assets/images/boy2-removebg-preview.png" alt="">
+
+                    <div class="about_me">
+                        <p> Namaskar! 🙏 I’m Saurabh Nath, a passionate and dedicated CSE student with a love for
+                            solving challenging problems and creating impactful solutions.</p>
+                        <br>
+                        <p>I have a strong foundation in C++ & SQL, alongside familiarity with Object-Oriented
+                            Programming (OOP) and DBMS concepts. My understanding of data structures and algorithms
+                            enables me to break down problems and devise efficient solutions.</p>
+                        <br>
+                        <p>As a Front-End Development Intern at Intern Studio, I developed responsive and dynamic
+                            websites using HTML, CSS, JavaScript, and React.js. </p>
+                        <br>
+                        <p>In addition, I am proficient in web technologies and have practical experience in building
+                            interactive user interfaces. 💻 I’m always ready to apply my knowledge to real-world
+                            projects and contribute innovative solutions in today’s fast-paced tech landscape. 🚀</p>
+                    </div>
+                </div>
+                <div id="education">
+                    <h1>Education</h1>
+                </div>
+            </div>
+            <!-- -----------------------Footer page--------------------- -->
+            <!-- 
         <div id="footer">
             <div class="footer_content">
                 <h1>
@@ -118,11 +151,13 @@
             </div>
 
         </div> -->
-        <!-- End of Footer  -->
+            <!-- End of Footer -->
 
-        <!-- End of Main Page  -->
+            <!-- End of Main Page  -->
+        </div>
+        <!-- End of container      -->
     </div>
-     <!-- End of Main Page  -->
+    <!-- End of Main Page  -->
 
     <!-- gsap script  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

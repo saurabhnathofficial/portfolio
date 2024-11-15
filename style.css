@@ -55,6 +55,7 @@ body {
     outline: none;
 
 
+
 }
 
 
@@ -185,15 +186,16 @@ nav i {
 #main {
     width: 100%;
     min-height: 100vh;
-    background-color: #121212;
+    background-color: hsl(0, 0%, 7%);
     position: relative;
 }
 
 #home {
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-color: transparent;
     position: relative;
+    padding: 5vw 0 ;
 }
 
 .home_wrapper {
@@ -236,7 +238,7 @@ nav i {
     letter-spacing: 1px;
     padding-top: 1vw;
 }
-
+ 
 #content .title {
     font-family: 'PPMori ExtraLight';
     font-weight: 100;
@@ -248,6 +250,9 @@ nav i {
     font-weight: 600;
     font-size: 1.9vw;
     letter-spacing: 3px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ----------------End of title----------------- */
@@ -421,7 +426,7 @@ nav i {
 
 
 #footer {
-    height: 93vh;
+    height: 80vh;
     width: 100%;
     border-radius: 50px 50px 0 0;
     display: flex;

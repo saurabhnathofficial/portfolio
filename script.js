@@ -4,7 +4,7 @@ var body = document.querySelector('body')
 const uniCursor = document.getElementById('cursor');
 
 body.addEventListener('mousemove', (e) => {
-  uniCursor.style.left = e.pageX + 'px';ww
+  uniCursor.style.left = e.pageX + 'px';
   uniCursor.style.top = e.pageY + 'px';
 
 });
