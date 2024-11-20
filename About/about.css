@@ -74,11 +74,10 @@
 
 #education h1 {
   text-align: center;
-  font-size: 3.8rem;
+  font-size: 3rem;
   letter-spacing: 2px;
   height: auto;
   font-family: 'ConeriaScriptDemo';
-  margin-bottom: 10vh;
 }
 
 #education .education_tagline {
@@ -86,11 +85,10 @@
   background-image: linear-gradient(90deg, #4570ff 20%, #be56ff 45%, #ff9d00 75%, #0095af);
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 2.2vw;
-  position: absolute;
-  top: 16%;
-  left: 50%;
-  transform: translateX(-50%);
+  font-size: 1.2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 
@@ -116,7 +114,7 @@
 }
 
 .education-card h1 {
-  font-size: 1.5rem;
+  font-size:  3rem;
   font-weight: bold;
 }
 
@@ -172,10 +170,10 @@
 
 .skills-section .skills-tagline {
   -webkit-text-fill-color: transparent;
-  background: #121FCF;
-  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  background-image: linear-gradient(90deg, #4570ff 20%, #be56ff 45%, #ff9d00 75%, #0095af);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.2rem;
 }
 
 /* Skills Grid */
@@ -251,7 +249,6 @@
 .concept-card i {
   font-size: 2.5rem;
   color: #ffd350;
-
   margin-bottom: 10px;
 }
 
@@ -267,4 +264,302 @@
 .concept-card p {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* skills concepts  */
+
+
+
+/* .experience */
+
+#experience {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+#experience h2 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-family: 'ConeriaScriptDemo';
+}
+ 
+ 
+#experience .experience_tagline {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #4570ff 20%, #be56ff 45%, #ff9d00 75%, #0095af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.2rem;
+  margin-bottom: 8vh;
+  text-align: center;
+}
+ 
+ 
+
+.experience-card {
+  margin-top: 5vh;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: 70vw;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 127, 80, 0.5);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.company-logo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-right: 1em;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #666;
+  font-size: 1rem;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.company-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 0 0.25em 0;
+}
+
+.job-title {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+.date-range {
+  font-size: 0.875rem;
+  margin: 0.5em 0;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #757070;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.skills-container {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.skill-tag{
+ transition: transform ease-in .1s;
+
+}
+.skill-tag img{
+  width: 50px;
+}
+
+.skill-tag:hover {
+ transform: scale(1.2);
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: #2196f3;
+  font-size: 0.875rem;
+  padding: 0.5em 0;
+  cursor: pointer;
+  display: block;
+  margin-top: 0.75em;
+}
+
+.expand-btn:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Cirtification page  */
+
+.certifications-container {
+  margin: 0 auto;
+  width: 90vw;
+  min-height: 90vh;
+}
+.certifications-container h1{
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-family: 'ConeriaScriptDemo';
+  text-align: center;
+}
+.certifications-container .tag-line{
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #4570ff 20%, #be56ff 45%, #ff9d00 75%, #0095af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 10vh;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.certification-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 127, 80, 0.5);
+}
+
+.certification-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.25rem;
+  height: 100%;
+  background: #2196f3;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cert-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  margin-right: 1rem;
+  object-fit: cover;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #666;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cert-issuer {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.cert-date {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.cert-details {
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  color: #2196f3;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.cert-link:hover {
+  color: #1976d2;
+}
+
+.cert-link svg {
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: 0.5em;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: none;
+  border: 0.125rem solid #2196f3;
+  color: #2196f3;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: #2196f3;
+  color: white;
+}
+
+.filter-btn:hover {
+  background: #2196f3;
+  color: white;
 }
