@@ -188,7 +188,7 @@ nav i {
 }
 
 #home {
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     background-color: transparent;
     position: relative;
@@ -247,9 +247,7 @@ nav i {
     font-weight: 600;
     font-size: 1.9vw;
     letter-spacing: 3px;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
 }
 
 /* ----------------End of title----------------- */
@@ -441,7 +439,6 @@ nav i {
     display: flex;
     flex-direction: column;
     gap: 5vw;
-
 }
 
 .footer_content h1 {
@@ -483,6 +480,7 @@ nav i {
 
 .footer_links h2 {
     font-family: 'PPMori ExtraLight';
+    height: auto;
 }
 
 .footer_contact {
@@ -501,14 +499,18 @@ nav i {
 
 .footer_contact img {
     vertical-align: calc(-9px);
-    height: 40px;
+    height: 40px; 
 }
-
 .footer_contact .footer_contact_img {
     margin: 0vh 1vh;
     height: 26px;
 }
-
+.footer_social a img{
+    transition: transform ease .2s;
+}
+.footer_social a img:hover{
+    transform: scale(1.2);
+}
 .bottom_footer {
     width: 100%;
     text-align: center;
@@ -518,7 +520,6 @@ nav i {
     font-size: 1.2vw;
 }
 
-.footer_bottom .footer_social a {
+.footer_social a {
     text-decoration: none;
-
 }
