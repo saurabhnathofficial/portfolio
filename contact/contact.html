@@ -51,7 +51,7 @@
                 <li><a lass="active" href="../About/about.html">About</a></li>
                 <li><a href="https://drive.google.com/file/d/1Us01bEAThRu3NkCONJXah0I7bh8aM0Ud/view"
                         target="_blank">Resume</a></li>
-                <li><a  class="active" href="#" target="_blank">Contact</a></li>
+                <li><a class="active" href="#">Contact</a></li>
 
 
             </ul>
@@ -95,44 +95,51 @@
                             <h3>Contact Information</h3>
                             <p>Feel free to contact me at the following details:</p>
                             <ul>
-                                <li><img src="../assets/icons/email.png" alt=""><a href="mailto:saurabhnathofficial01@gmail.com"> saurabhnathofficial01@gmail.com</a></li>
-                                <li><img src="../assets/icons/phone.png" alt="" style="height: 27px; margin-left: 7px;"><a href="tel:+919753806243">+91 9753806243</a></li>
-                                <!-- <li><img src="../assets/icons/emoji1.png" alt="" style="vertical-align:calc(-14px);"> Bhopal, India</li> -->
+                                <li><img src="../assets/icons/email.png" alt=""><a
+                                        href="mailto:saurabhnathofficial01@gmail.com">
+                                        saurabhnathofficial01@gmail.com</a></li>
+                                <li><img src="../assets/icons/phone.png" alt=""
+                                        style="height: 27px; margin-left: 7px;"><a href="tel:+919753806243">+91
+                                        9753806243</a></li>
+
                             </ul>
                             <ul class="bottom_contact-info">
                                 <a href="https://github.com/saurabhnathofficial" target="_blank">
                                     <img src="../assets/icons/git.png" alt="" srcset="" ">
                                 </a>
-                                <a href="https://www.linkedin.com/in/saurabhnathofficial" target="_blank">
+                                <a href=" https://www.linkedin.com/in/saurabhnathofficial" target="_blank">
                                     <img src="../assets/icons/linkedin.png" alt="" srcset="" ">
                                 </a>
-                                <a href="https://x.com/saurabhnath0" target="_blank">
+                                <a href=" https://x.com/saurabhnath0" target="_blank">
                                     <img src="../assets/icons/twitter.png" alt="" srcset="" ">
                                 </a>
-                                <a href="https://www.instagram.com/saurabhnath77/" target="_blank">
+                                <a href=" https://www.instagram.com/saurabhnath77/" target="_blank">
                                     <img src="../assets/icons/insta.png" alt="" srcset="" ">
                                 </a>
                             </ul>
                         </div>
 
                         <!-- Contact Form -->
-                        <div class="contact-form">
-                            <form id="contactForm">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <div class=" contact-form">
+                                    <form method="post" id="contactForm" name="google-sheet"
+                                        >
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email"
+                                            required>
 
-                                <label for="subject">Your Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                                        <label for="subject">Your Subject</label>
+                                        <input type="text" id="subject" name="subject" placeholder="Enter subject"
+                                            required>
 
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Write your message here"
-                                    required></textarea>
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" placeholder="Write your message here"
+                                            required></textarea>
 
-                                <button type="submit">Send Message</button>
-                            </form>
+                                        <button type="submit">Send Message</button>
+                                    </form>
                         </div>
                     </div>
                 </div>
@@ -147,7 +154,7 @@
 
 
                 <div class="saurabh">
-                    <img src="../assets/profile-pic (18).png" alt="">
+                    <img src="../assets/images/profile.png" alt="">
                     <h1>Saurabh Nath</h1>
                 </div>
 
@@ -202,16 +209,28 @@
     <script src="./about.js"></script>
     <script>
         /* script.js */
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form submission
+        // document.getElementById('contactForm').addEventListener('submit', function (event) {
+        //     event.preventDefault(); // Prevent form submission
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const subject = document.getElementById('subject').value;
+        //     const message = document.getElementById('message').value;
 
-            alert(`Thank you, ${name}! Your message has been sent successfully.`);
-        });
+        //     alert(`Thank you, ${name}! Your message has been sent successfully.`);
+        // });
+
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw_1mHyZO1zTk6usJwMjKjXgkzag76xdV9-dPxzFRpT16K2fnj2omaUdOBpciGtY6eriw/exec'
+        const form = document.forms['google-sheet']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+
 
     </script>
 </body>
